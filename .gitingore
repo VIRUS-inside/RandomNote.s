@@ -14,4 +14,4 @@
 *.lnp
 *.sct
 *.hex
-*gitignore
+*.gitignore
