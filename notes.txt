@@ -1,0 +1,14 @@
+If apt-get update gives >errors so try out edit >>$nano /etc/apt/source.list
+and past below list ^ignore (||)symbols
+(|deb http://http.kali.org/kali kali-rolling main contrib non-free
+# For source package access, uncomment the following line
+# deb-src http://http.kali.org/kali kali-rolling main contrib non-free|) 
+
+**for http server :| python -m SimpleHTTPServer
+ 
+\\4vnc
+ar xzvf VNC.tar.gz
+apt-get autoremove tightvncserver
+apt-get autoremove xtightvncviewer
+dpkg -i VNC-Server.deb
+dpkg -i VNC-Viewer.deb
