@@ -6,6 +6,5 @@ deb http://http.kali.org/kali kali-rolling main contrib non-free
 
 **for http server in kali linux :| python -m SimpleHTTPServer
  
-[![ALT TEXT](https://upload.wikimedia.org/wikipedia/en/thumb/5/55/SHODAN_hires.jpg/250px-SHODAN_hires.jpg)]
-
-SHODAN (Sentient Hyper-Optimized Data Access Network)
+>https://upload.wikimedia.org/wikipedia/en/thumb/5/55/SHODAN_hires.jpg/250px-SHODAN_hires.jpg
+SHODAN (Sentient Hyper-Optimized Data Access Network)<
