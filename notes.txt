@@ -10,3 +10,7 @@ deb http://http.kali.org/kali kali-rolling main contrib non-free
 SHODAN (Sentient Hyper-Optimized Data Access Network)<
 
 》》kali linux pi>>> https://whitedome.com.au/re4son/sticky-fingers-kali-pi/
+
+#new kali linux sourece repository
+deb http://repo.kali.org/kali kali-rolling main non-free contrib
+src-deb http://repo.kali.org/kali kali-rolling main non-free contrib
