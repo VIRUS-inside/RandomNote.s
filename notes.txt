@@ -11,7 +11,7 @@ SHODAN (Sentient Hyper-Optimized Data Access Network)<
 
 》》kali linux pi>>> https://whitedome.com.au/re4son/sticky-fingers-kali-pi/
 
-#new kali linux sourece repository
+#new kali linux source repository
 deb http://repo.kali.org/kali kali-rolling main non-free contrib
 deb-src http://repo.kali.org/kali kali-rolling main non-free contrib
 
