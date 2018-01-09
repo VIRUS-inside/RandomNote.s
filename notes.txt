@@ -17,3 +17,6 @@ deb-src http://repo.kali.org/kali kali-rolling main non-free contrib
 
 #users and group in windows(to change or add any users)
 lusrmgr.msc
+
+#Change network type using Local Security Policy
+Go to Run –> secpol.msc ->Select Network List Manager Policies
