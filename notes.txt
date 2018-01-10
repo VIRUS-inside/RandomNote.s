@@ -20,3 +20,10 @@ lusrmgr.msc
 
 #Change network type using Local Security Policy
 Go to Run –> secpol.msc ->Select Network List Manager Policies
+
+#install xrdp in kali linux>
+$sudo apt install -y xrdp tigervnc-standalone-server
+$cd /etc/xrdp/
+$ cat <<EOF | sudo patch -p1
+$sudo systemctl enable xrdp
+$ sudo systemctl restart xrd
