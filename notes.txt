@@ -4,7 +4,7 @@ deb http://http.kali.org/kali kali-rolling main contrib non-free
 # For source package access, uncomment the following line
 # deb-src http://http.kali.org/kali kali-rolling main contrib non-free
 
-**for http server in kali linux :| python -m SimpleHTTPServer
+**for http server in kali linux :| python -m SimpleHTTPServer "PORT NO"
  
 >https://upload.wikimedia.org/wikipedia/en/thumb/5/55/SHODAN_hires.jpg/250px-SHODAN_hires.jpg
 SHODAN (Sentient Hyper-Optimized Data Access Network)<
