@@ -30,3 +30,7 @@ $ sudo systemctl restart xrdp
 #linux http server command
 python3 -m http.server 80
 python -m SimpleHTTPServer 80
+
+
+#vmware to virtualbox convert 
+ovftool "c:\path\to\original_vm.vmx" "c:\path\to\export.ovf"
