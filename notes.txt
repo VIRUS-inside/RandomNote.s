@@ -34,3 +34,14 @@ python -m SimpleHTTPServer 80
 
 #vmware to virtualbox convert 
 ovftool "c:\path\to\original_vm.vmx" "c:\path\to\export.ovf"
+
+
+#install ntopng in rpi
+sudo su
+wget http://packages.ntop.org/apt/ntop.key
+apt-key add ntop.key
+Raspbian Stretch (9.x) [Active]
+echo "deb http://apt.ntop.org/stretch_pi armhf/" > /etc/apt/sources.list.d/ntop.list
+echo "deb http://apt.ntop.org/stretch_pi all/" >> /etc/apt/sources.list.d/ntop.list
+apt-get update
+apt-get install ntopng nprobe
