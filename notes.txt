@@ -45,3 +45,8 @@ echo "deb http://apt.ntop.org/stretch_pi armhf/" > /etc/apt/sources.list.d/ntop.
 echo "deb http://apt.ntop.org/stretch_pi all/" >> /etc/apt/sources.list.d/ntop.list
 apt-get update
 apt-get install ntopng nprobe
+
+
+#linux auto start service at startup
+update-rc.d -f <service_name> defaults | remove(to remove service)
+
