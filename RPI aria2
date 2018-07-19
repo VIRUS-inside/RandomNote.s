@@ -1,0 +1,83 @@
+aria2 on Raspberry Pi | Installation and Troubleshooting
+Installing aria2 on Raspberry Pi
+aria2 is a lightweight multi-protocol & multi-source command-line download utility. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink. aria2 can be manipulated via built-in JSON-RPC and XML-RPC interfaces. They said.
+
+Installation:
+First thing first, always update your repository. 
+sudo apt-get update
+Next, download aria2. 
+sudo apt-get install aria2
+Now, we make a config file for aria2. First, make the directory for it. 
+sudo mkdir /home/pi/.aria2
+And make the config file. 
+sudo nano /home/pi/.aria2/aria2.conf
+Here's my configuration, you can always configure it yourself using this guide. 
+dir=/home/pi/downloads
+file-allocation=falloc 
+continue 
+log-level=error 
+max-connection-per-server=4 
+summary-interval=120 
+daemon=true 
+enable-rpc=true 
+rpc-listen-port=6800 
+rpc-listen-all=true 
+max-concurrent-downloads=1 
+disable-ipv6=true 
+disk-cache=25M 
+timeout=600 
+retry-wait=30 
+max-tries=50
+Now, we make aria2 can run on boot. First, make init.d file. 
+sudo nano /etc/init.d/aria2
+Here's my script: 
+#! /bin/sh 
+# /etc/init.d/aria2 
+
+### BEGIN INIT INFO 
+# Provides: aria2cRPC 
+# Required-Start: $network $local_fs $remote_fs 
+# Required-Stop: $network $local_fs $remote_fs 
+# Default-Start: 2 3 4 5 
+# Default-Stop: 0 1 6 
+# Short-Description: aria2c RPC init script. 
+# Description: Starts and stops aria2 RPC services. 
+### END INIT INFO 
+
+RETVAL=0 
+case "$1" in 
+start) 
+echo -n "Starting aria2c daemon " 
+umask 0000 
+aria2c --daemon=true --enable-rpc --rpc-listen-all -D --conf-path=/home/pi/.aria2/aria2.conf 
+RETVAL=$? 
+echo 
+;; 
+stop) 
+echo -n "Shutting down aria2c daemon " 
+/usr/bin/killall aria2c 
+RETVAL=$? 
+echo 
+;; 
+restart) 
+stop 
+sleep 3 
+start 
+;; 
+*) 
+echo $"Usage: $0 {start|stop|restart}" 
+RETVAL=1 
+esac 
+exit $RETVAL
+Now change aria2's init.d script permission so it can run as executable. 
+sudo chmod +x /etc/init.d/aria2
+Make aria2 run on boot. 
+sudo update-rc.d aria2 defaults
+Now reboot your Raspberry Pi 
+sudo shutdown -r now
+You can always access aria2 on local network using this webgui provided by ziahamza. 
+To configure the webgui, go to Setting>Connection Setting. 
+Enter the host, in this case your Raspberry Pi IP address. And your aria2 port which is inside your aria2.conf, in this case 6800. 
+Troubleshooting: 
+1. Download was not successful, download directory are external harddrive
+Open aria2.conf and change file-allocation=falloc to file-allocation=none
