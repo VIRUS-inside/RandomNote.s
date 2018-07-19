@@ -50,3 +50,5 @@ apt-get install ntopng nprobe
 #linux auto start service at startup
 update-rc.d -f <service_name> defaults | remove(to remove service)
 
+
+https://github.com/qbittorrent/qBittorrent/wiki/Setting-up-qBittorrent-on-Ubuntu-server-as-daemon-with-Web-interface-(14.04-and-older)
