@@ -52,3 +52,4 @@ update-rc.d -f <service_name> defaults | remove(to remove service)
 
 
 https://github.com/qbittorrent/qBittorrent/wiki/Setting-up-qBittorrent-on-Ubuntu-server-as-daemon-with-Web-interface-(14.04-and-older)
+https://joelj.net/raspberrypi/2017/09/25/Setup-Qbittorrent-server-in-raspberry-pi.html
