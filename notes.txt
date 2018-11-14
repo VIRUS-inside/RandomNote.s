@@ -58,3 +58,7 @@ https://joelj.net/raspberrypi/2017/09/25/Setup-Qbittorrent-server-in-raspberry-p
 sudo apt install curl build-essential git
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt install -y nodejs
+
+#dataplicity
+https://docs.dataplicity.com/docs/remotely-monitor-your-pi
+https://docs.dataplicity.com/docs/make-a-remote-graphical-interface-for-your-pi
